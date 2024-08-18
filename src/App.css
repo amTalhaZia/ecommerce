@@ -1,18 +1,24 @@
-/* src/App.css */
 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
 }
 
 .app-header {
-  background-color: #3498db;
-  color: white;
-  text-align: center;
-  padding: 20px;
+  background: #2c3e50; 
+  color: #ecf0f1; 
+  padding: 20px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 
 .app-main {
