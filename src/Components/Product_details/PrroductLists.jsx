@@ -2,20 +2,27 @@ import React, { useState, useEffect } from 'react';
 import { getProducts } from '../../Api/Api';
 import { PropagateLoader } from 'react-spinners';
 import './PrroductLists.css';
-
+import { useCart } from '../../Card_context/CartContext';
 const PrroductLists = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const  {getCart} =  useCart();
 
   const handleChange = (e) => {
     setSearchQuery(e.target.value);
   };
 
+   
   const productFilter = products.filter((product) => 
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  
+  const handleToCart = (product) => {
+    getCart(product)
+  }
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -68,7 +75,7 @@ const PrroductLists = () => {
                   <a href={`/product_description/${product.id}`}>
                     <button className="view-details-btn">View Details</button>
                   </a>
-                  <button className="add-to-cart-btn">Add to Cart</button>
+                  <button className="add-to-cart-btn" onClick={()=> {handleToCart(product)}} >Add to Cart</button>
                 </div>
               </div>
             </li>

@@ -6,12 +6,17 @@ import Product_description from './Components/Product_details/Product_descriptio
 import Login from './Components/Login/Login';
 import Links from './Components/Link/Links';
 import Signup from './Components/signup/Signup';
+import Cart from './Components/Cart/Cart';
+import { useNavigate } from 'react-router-dom';
+
 
 const App = () => {
+
+  const Navigate = useNavigate()
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>E-Commerce Website</h1>
+        <h1 onClick={()=>{Navigate("/")}}>  Talha </h1>
        <Links/>
       </header>
       <main className="app-main">
@@ -20,6 +25,7 @@ const App = () => {
           <Route path='/signup' element={<Signup />} />
           <Route path='/' element={<PrroductLists />} />
           <Route path='/product_description/:id' element={<Product_description />} />
+          <Route path='/cart' element={<Cart />} />
         </Routes>
       </main>
       <footer className="app-footer">

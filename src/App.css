@@ -32,3 +32,11 @@
   text-align: center;
   padding: 10px;
 }
+
+
+
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1rem;
+  }
+}

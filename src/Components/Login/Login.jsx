@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import { auth , signInWithEmailAndPassword} from '../../firebase_config/Config';
+import { auth , signInWithEmailAndPassword} from '../firebase_config/Config';
 
 const Login = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });

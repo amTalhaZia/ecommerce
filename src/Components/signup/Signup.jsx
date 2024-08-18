@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { auth, createUserWithEmailAndPassword } from '../../firebase_config/Config';
+import { auth, createUserWithEmailAndPassword } from '../firebase_config/Config';
 import "./signup.css"
 
 const Signup = () => {
