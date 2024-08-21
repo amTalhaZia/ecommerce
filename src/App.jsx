@@ -14,7 +14,7 @@ import Signup from './Components/signup/Signup';
 import Cart from './Components/Cart/Cart';
 import { ToastContainer } from 'react-toastify';
 
-const stripePromise = loadStripe('your-stripe-publishable-key');
+const stripePromise = loadStripe('pk_test_51PppPc074wIBTh1WI4P4qHgQq8ssHNMgEMkrhx8ExLy8rW8ts14Zz9zsAU0kwPP34Yg84MeF62kzQTlHzgJYYqvJ00CLBUZtnE');
 
 const App = () => {
   const navigate = useNavigate();
